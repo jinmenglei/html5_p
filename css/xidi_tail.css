@@ -1,0 +1,84 @@
+a{
+    margin: 0;
+    padding: 0;
+}
+.tail{
+    position: absolute;
+    left: 0;
+    top: 380px;
+    width:800px;
+    height:100px;
+    background:rgba(240,240,240,1);
+}
+.tail_water{
+    position: absolute;
+    left: 47px;
+    top: 26px;
+}
+.tail_water_percent{
+    position: absolute;
+    left: 114px;
+    top: 7px;
+    width:59px;
+    height:28px;
+    font-size:28px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:48px;
+}
+.tail_water_label{
+    position: absolute;
+    left: 115px;
+    top: 43px;
+    width: 57px;
+    height: 28px;
+    font-size:28px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:48px;
+}
+.tail_mode_button{
+    position: absolute;
+    left: 235px;
+    top: 0;
+    width: 331px;
+    height: 100px;
+    background: url("../img/首页/切换按钮.png") no-repeat;
+    border-style: none;
+    font-size:34px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+    line-height:36px;
+}
+.tail_odom{
+    position: absolute;
+    left: 597px;
+    top: 26px;
+}
+.tail_odom_sum{
+    position: absolute;
+    left: 658px;
+    top: 7px;
+    width:93px;
+    height:28px;
+    font-size:28px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:48px;
+}
+.tail_odom_label{
+    position: absolute;
+    left: 676px;
+    top: 43px;
+    width: 57px;
+    height: 28px;
+    font-size:28px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:48px;
+}

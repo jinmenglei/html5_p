@@ -1,0 +1,30 @@
+a{
+    margin: 0;
+    padding: 0;
+    width:57px;
+    height:28px;
+    font-size:28px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+    line-height:36px;
+    position: absolute;
+    top: 70px;
+}
+.mode_mt{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 800px;
+    height: 340px;
+    background:rgba(214,213,214,1);
+}
+.mode_mt_brush{
+    left: 163px;
+}
+.mode_mt_water{
+    left: 413px;
+}
+.mode_mt_direction{
+    left: 615px;
+}
