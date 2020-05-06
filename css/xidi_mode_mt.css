@@ -29,14 +29,15 @@ a{
 .mode_mt_direction{
     left: 615px;
 }
-.switch-wrap{
+/*刷盘按钮*/
+.mt_brush_wrap{
     height: 90px;
     width: 190px;
     position: absolute;
     left: 97px;
     top: 125px;
 }
-.switch-wrap input[type=checkbox]{
+.mt_brush_wrap input[type=checkbox]{
     /*height: 200px;*/
     /*width: 100px;*/
     /*position: absolute;*/
@@ -46,7 +47,7 @@ a{
     margin:0;
     padding:0;
 }
-.switch-wrap .open,.switch-wrap .close{
+.mt_brush_wrap .open,.mt_brush_wrap .close{
     position: absolute;
     left: 115px;
     top: 20px;
@@ -58,12 +59,12 @@ a{
     color:rgba(107,119,131,1);
     line-height:49px;
 }
-.switch-wrap .open{
+.mt_brush_wrap .open{
     left: 28px;
     color: rgba(34, 52, 69, 1);
 }
 
-.switch-wrap label{
+.mt_brush_wrap label{
     position: absolute;
     left: 0;
     top: 0;
@@ -78,7 +79,7 @@ a{
     /* overflow: hidden; */
     box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
-.switch-wrap label::before {
+.mt_brush_wrap label::before {
     content: '';
     position: absolute;
     top: 3px;
@@ -92,7 +93,7 @@ a{
     z-index: 2;
 }
 
-.switch-wrap label::after {
+.mt_brush_wrap label::after {
     position: absolute;
     top: -2px;
     bottom: -2px;
@@ -104,13 +105,192 @@ a{
     border-radius: 45px;
 }
 
-.switch-wrap input:checked + label {
+.mt_brush_wrap input:checked + label {
     /*background: #33DB70;*/
-    background:linear-gradient(90deg,rgba(128,189,245,1),rgba(59,115,171,1));
-    /*border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;*/
+    color: rgba(97, 173, 246, 1);
+    background:linear-gradient(0deg,rgba(59,115,171,1),rgba(128,189,245,1));
+    border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
     /*border:2px solid;*/
 }
-.switch-wrap input:checked + label:before {
+.mt_brush_wrap input:checked + label:before {
     /*top: 3px;*/
     transform: translateX(100px);
+}
+/*吸水按钮*/
+.mt_water_wrap{
+    height: 90px;
+    width: 190px;
+    position: absolute;
+    left: 346px;
+    top: 125px;
+}
+.mt_water_wrap input[type=checkbox]{
+    /*height: 200px;*/
+    /*width: 100px;*/
+    /*position: absolute;*/
+    /*left: 97px;*/
+    /*top: 125px;*/
+    visibility: hidden;
+    margin:0;
+    padding:0;
+}
+.mt_water_wrap .open_water,.mt_water_wrap .close_water{
+    position: absolute;
+    left: 115px;
+    top: 20px;
+    width:38px;
+    height:38px;
+    font-size:38px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(107,119,131,1);
+    line-height:49px;
+}
+.mt_water_wrap .open_water{
+    left: 28px;
+    color: rgba(34, 52, 69, 1);
+}
+
+.mt_water_wrap label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 190px;
+    height: 90px;
+    color: rgba(206,206,206,1);
+    background: linear-gradient(180deg,rgba(219,219,219,1),rgba(163,163,163,1));
+    border-radius: 45px;
+    /* border: 2px solid; */
+    border-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
+    /* overflow: hidden; */
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.mt_water_wrap label::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.5s;
+    width:84px;
+    height:84px;
+    background:linear-gradient(0deg,rgba(255,255,255,1),rgba(200,200,200,1));
+    box-shadow:0px 0px 6px 0px rgba(120,120,120,0.8);
+    border-radius:50%;
+    z-index: 2;
+}
+
+.mt_water_wrap label::after {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(rgba(158,158,158,1), rgba(255,255,255,1));
+    content: '';
+    z-index: -1;
+    border-radius: 45px;
+}
+
+.mt_water_wrap input:checked + label {
+    /*background: #33DB70;*/
+    color: rgba(97, 173, 246, 1);
+    background:linear-gradient(0deg,rgba(59,115,171,1),rgba(128,189,245,1));
+    border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    /*border:2px solid;*/
+}
+.mt_water_wrap input:checked + label:before {
+    /*top: 3px;*/
+    transform: translateX(100px);
+}
+
+/*方向按钮*/
+.mt_direction_wrap{
+    height: 190px;
+    width: 90px;
+    position: absolute;
+    left: 605px;
+    top: 125px;
+}
+.mt_direction_wrap input[type=checkbox]{
+    /*height: 200px;*/
+    /*width: 100px;*/
+    /*position: absolute;*/
+    /*left: 97px;*/
+    /*top: 125px;*/
+    visibility: hidden;
+    margin:0;
+    padding:0;
+}
+.mt_direction_wrap .open_d,.mt_direction_wrap .close_d{
+    position: absolute;
+    left: 14px;
+    top: 102px;
+    width:62px;
+    height:30px;
+    font-size:30px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(107,119,131,1);
+    line-height:49px;
+}
+.mt_direction_wrap .open_d{
+    top: 38px;
+    color: rgba(34, 52, 69, 1);
+}
+
+.mt_direction_wrap label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 90px;
+    height: 190px;
+    color: rgba(206,206,206,1);
+    background: linear-gradient(180deg,rgba(219,219,219,1),rgba(163,163,163,1));
+    border-radius: 45px;
+    /* border: 2px solid; */
+    border-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
+    /* overflow: hidden; */
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.mt_direction_wrap label::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.5s;
+    width:84px;
+    height:84px;
+    background:linear-gradient(0deg,rgba(255,255,255,1),rgba(200,200,200,1));
+    box-shadow:0px 0px 6px 0px rgba(120,120,120,0.8);
+    border-radius:50%;
+    z-index: 2;
+}
+
+.mt_direction_wrap label::after {
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(rgba(158,158,158,1), rgba(255,255,255,1));
+    content: '';
+    z-index: -1;
+    border-radius: 45px;
+}
+
+.mt_direction_wrap input:checked + label {
+    /*background: #33DB70;*/
+    color: rgba(97, 173, 246, 1);
+    background:linear-gradient(0deg,rgba(59,115,171,1),rgba(128,189,245,1));
+    border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    /*border:2px solid;*/
+}
+.mt_direction_wrap input:checked + label:before {
+    /*top: 3px;*/
+    transform: translateY(100px);
 }
