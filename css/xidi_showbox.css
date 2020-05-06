@@ -1,0 +1,51 @@
+.mode_showbox{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:800px;
+    height:480px;
+    background:rgba(0,0,0,0.8);
+}
+.bg_white{
+    margin: 0 0 0 0;
+    padding: 0;
+    position: absolute;
+    left: 100px;
+    top: 53px;
+    width:600px;
+    height:374px;
+    background:rgba(214,213,214,1);
+    border-radius:10px;
+}
+.showbox_tip{
+    position: absolute;
+    left: 100px;
+    top: 70px;
+    width:400px;
+    height:82px;
+    font-size:34px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:48px;
+    text-align: center;
+}
+.showbox_no,.showbox_yes{
+    position: absolute;
+    left: 41px;
+    top: 223px;
+    width:240px;
+    height:70px;
+    background:rgba(255,255,255,1);
+    border-radius:10px;
+    font-size:30px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:48px;
+}
+.showbox_yes{
+    left: 320px;
+    background:rgba(59,128,194,1);
+    color:rgba(255,255,255,1);
+}
