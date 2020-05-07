@@ -34,7 +34,7 @@
     <a class="tail_odom_label">里程</a>
 </div>
 <!--手动模式界面-->
-<div class="mode_mt" id="mode_mt">
+<div class="mode_mt" id="mode_mt" hidden>
     <a class="mode_mt_brush" >刷盘</a>
     <a class="mode_mt_water">吸水</a>
     <a class="mode_mt_direction">方向</a>
@@ -68,29 +68,47 @@
     </div>
 </div>
 <!--鉴权界面-->
-<div class="mode_author" id="mode_author" hidden>
-    <div class="bg_qrcode"></div>
+<div class="mode_author" id="mode_author">
+    <div class="bg_qrcode">
+        <img for="bg_qrcode" src="img/验证/qrcode.png" id="qr_code">
+    </div>
+
     <span class="author_tip" id="author_tip">
        请扫描二维码或 输入管理员密码
     </span>
-    <img src="img/验证/未输入.png" class="author_radio" id="author_radio_1">
-    <img src="img/验证/未输入.png" class="author_radio" id="author_radio_2">
-    <img src="img/验证/未输入.png" class="author_radio" id="author_radio_3">
-    <img src="img/验证/未输入.png" class="author_radio" id="author_radio_4">
-    <img src="img/验证/未输入.png" class="author_radio" id="author_radio_5">
-    <img src="img/验证/未输入.png" class="author_radio" id="author_radio_6">
-    <button class="author_button" id="author_button_0"></button>
-    <button class="author_button" id="author_button_1"></button>
-    <button class="author_button" id="author_button_2"></button>
-    <button class="author_button" id="author_button_3"></button>
-    <button class="author_button" id="author_button_4"></button>
-    <button class="author_button" id="author_button_5"></button>
-    <button class="author_button" id="author_button_6"></button>
-    <button class="author_button" id="author_button_7"></button>
-    <button class="author_button" id="author_button_8"></button>
-    <button class="author_button" id="author_button_9"></button>
-    <button class="author_button" id="author_button_back"></button>
-    <button class="author_button" id="author_button_del"></button>
+
+    <div class="author_radio" id="author_radio_1">
+        <div class="author_radio_black" id="author_radio_black_1" hidden></div>
+    </div>
+    <div class="author_radio" id="author_radio_2">
+        <div class="author_radio_black" id="author_radio_black_2" hidden></div>
+    </div>
+    <div class="author_radio" id="author_radio_3">
+        <div class="author_radio_black" id="author_radio_black_3" hidden></div>
+    </div>
+    <div class="author_radio" id="author_radio_4">
+        <div class="author_radio_black" id="author_radio_black_4" hidden></div>
+    </div>
+    <div class="author_radio" id="author_radio_5">
+        <div class="author_radio_black" id="author_radio_black_5" hidden></div>
+    </div>
+    <div class="author_radio" id="author_radio_6">
+        <div class="author_radio_black" id="author_radio_black_6" hidden></div>
+    </div>
+    <button class="author_button" id="author_button_0">0</button>
+    <button class="author_button" id="author_button_1">1</button>
+    <button class="author_button" id="author_button_2">2</button>
+    <button class="author_button" id="author_button_3">3</button>
+    <button class="author_button" id="author_button_4">4</button>
+    <button class="author_button" id="author_button_5">5</button>
+    <button class="author_button" id="author_button_6">6</button>
+    <button class="author_button" id="author_button_7">7</button>
+    <button class="author_button" id="author_button_8">8</button>
+    <button class="author_button" id="author_button_9">9</button>
+    <button class="author_button" id="author_button_back">
+        <img for="author_button_back" src="img/验证/back.png">
+    </button>
+    <button class="author_button" id="author_button_del">清除</button>
 
 
 </div>
