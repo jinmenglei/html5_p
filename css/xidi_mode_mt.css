@@ -77,7 +77,7 @@ a{
     /* border: 2px solid; */
     border-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
     /* overflow: hidden; */
-    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 6px 4px 0px rgba(0, 0, 0, 0.46);
 }
 .mt_brush_wrap label::before {
     content: '';
@@ -87,7 +87,7 @@ a{
     transition: transform 0.5s;
     width:84px;
     height:84px;
-    background:linear-gradient(0deg,rgba(255,255,255,1),rgba(200,200,200,1));
+    background:linear-gradient(0deg,rgba(200,200,200,1),rgba(255,255,255,1));
     box-shadow:0px 0px 6px 0px rgba(120,120,120,0.8);
     border-radius:50%;
     z-index: 2;
@@ -110,7 +110,7 @@ a{
     color: rgba(97, 173, 246, 1);
     background:linear-gradient(0deg,rgba(59,115,171,1),rgba(128,189,245,1));
     border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
-    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    bbox-shadow: inset 0px 6px 4px 0px rgba(0, 0, 0, 0.46);
     /*border:2px solid;*/
 }
 .mt_brush_wrap input:checked + label:before {
@@ -165,7 +165,7 @@ a{
     /* border: 2px solid; */
     border-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
     /* overflow: hidden; */
-    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 6px 4px 0px rgba(0, 0, 0, 0.46);
 }
 .mt_water_wrap label::before {
     content: '';
@@ -198,7 +198,7 @@ a{
     color: rgba(97, 173, 246, 1);
     background:linear-gradient(0deg,rgba(59,115,171,1),rgba(128,189,245,1));
     border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
-    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 6px 4px 0px rgba(0, 0, 0, 0.46);
     /*border:2px solid;*/
 }
 .mt_water_wrap input:checked + label:before {
@@ -254,7 +254,7 @@ a{
     /* border: 2px solid; */
     border-image: linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
     /* overflow: hidden; */
-    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 6px 4px 0px rgba(0, 0, 0, 0.46);
 }
 .mt_direction_wrap label::before {
     content: '';
@@ -287,7 +287,7 @@ a{
     color: rgba(97, 173, 246, 1);
     background:linear-gradient(0deg,rgba(59,115,171,1),rgba(128,189,245,1));
     border-image:linear-gradient(0deg, rgba(255,255,255,1), rgba(158,158,158,1)) 2 2;
-    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 6px 4px 0px rgba(0, 0, 0, 0.46);
     /*border:2px solid;*/
 }
 .mt_direction_wrap input:checked + label:before {

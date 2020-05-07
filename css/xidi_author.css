@@ -1,0 +1,155 @@
+.mode_author{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 800px;
+    height: 340px;
+    background:rgba(214,213,214,1);
+    z-index: -999
+}
+.bg_qrcode{
+    position: absolute;
+    left: 18px;
+    top: 120px;
+    width:161px;
+    height:161px;
+    background:rgba(255,255,255,1);
+    border-radius:5px;
+}
+.author_tip{
+    position: absolute;
+    left: 191px;
+    top: 10px;
+    width:418px;
+    height:28px;
+    font-size:28px;
+    font-family:Microsoft YaHei;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    line-height:36px;
+}
+.author_radio{
+    position: absolute;
+    top: 57px;
+    width:26px;
+    height:26px;
+}
+#author_radio_1{
+    left: 307px;
+}
+#author_radio_2{
+    left: 370px;
+}
+#author_radio_3{
+    left: 432px;
+}
+#author_radio_4{
+    left: 495px;
+}
+#author_radio_5{
+    left: 557px;
+}
+#author_radio_6{
+    left: 640px;
+}
+.author_button{
+    outline: none;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 109px;
+    width: 90px;
+    height: 90px;
+}
+#author_button_0{
+    left: 192px;
+    background: url("../img/验证/0.png");
+}
+#author_button_1{
+    left: 288px;
+    background: url("../img/验证/1.png");
+}
+#author_button_2{
+    left: 384px;
+    background: url("../img/验证/2.png");
+}
+#author_button_3{
+    left: 480px;
+    background: url("../img/验证/3.png");
+}
+#author_button_4{
+    left: 576px;
+    background: url("../img/验证/4.png");
+}
+#author_button_back{
+    left: 672px;
+    background: url("../img/验证/删除.png");
+}
+#author_button_5{
+    left: 192px;
+    top: 205px;
+    background: url("../img/验证/5.png");
+}
+#author_button_6{
+    left: 288px;
+    top: 205px;
+    background: url("../img/验证/6.png");
+}
+#author_button_7{
+    left: 384px;
+    top: 205px;
+    background: url("../img/验证/7.png");
+}
+#author_button_8{
+    left: 480px;
+    top: 205px;
+    background: url("../img/验证/8.png");
+}
+#author_button_9{
+    left: 576px;
+    top: 205px;
+    background: url("../img/验证/9.png");
+}
+#author_button_del{
+    left: 672px;
+    top: 205px;
+    background: url("../img/验证/清除.png");
+}
+
+#author_button_0:active{
+    background: url("../img/验证/0-选中.png");
+}
+#author_button_1:active{
+    background: url("../img/验证/1-选中.png");
+}
+#author_button_2:active{
+    background: url("../img/验证/2-选中.png");
+}
+#author_button_3:active{
+    background: url("../img/验证/3-选中.png");
+}
+#author_button_4:active{
+    background: url("../img/验证/4-选中.png");
+}
+#author_button_back:active{
+    background: url("../img/验证/删除-选中.png");
+}
+#author_button_5:active{
+    background: url("../img/验证/5-选中.png");
+}
+#author_button_6:active{
+    background: url("../img/验证/6-选中.png");
+}
+#author_button_7:active{
+    background: url("../img/验证/7-选中.png");
+}
+#author_button_8:active{
+    background: url("../img/验证/8-选中.png");
+}
+#author_button_9:active{
+    background: url("../img/验证/9-选中.png");
+}
+#author_button_del:active{
+    background: url("../img/验证/清除-选中.png");
+}
