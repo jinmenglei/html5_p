@@ -7,14 +7,14 @@
  *
  * http://www.gnu.org/licenses/gpl.txt
  */
-// $(document).ready(function() {
-//     $("#featureCarousel").featureCarousel({
-//         // include options like this:
-//         // (use quotes only for string values, and no trailing comma after last option)
-//         // option: value,
-//         // option: value
-//     });
-// });
+$(document).ready(function() {
+    $("#featureCarousel").featureCarousel({
+        // include options like this:
+        // (use quotes only for string values, and no trailing comma after last option)
+        // option: value,
+        // option: value
+    });
+});
 (function($) {
 
     $.fn.featureCarousel = function (options) {
@@ -65,10 +65,11 @@
                     var $imageElements = pluginData.featuresContainer.find("img");
                     var loadedImages = 0;
                     var totalImages = $imageElements.length;
+                    var $blipsContainer = pluginData.featuresContainer.find(".blipsContainer");
 
                     $imageElements.each(function () {
                         // Attempt to load the images
-                        $(this).load(function () {
+                        $(this).on('load',function() {
                             // Add to number of images loaded and see if they are all done yet
                             loadedImages++;
                             if (loadedImages == totalImages) {
@@ -547,20 +548,26 @@
                 return (goingToLeft < goingToRight) ? goingToLeft*-1 : goingToRight;
             }
 
-            // Move to the left if left button clicked
-            $(".leftButton").click(function () {
-                initiateMove(false,1);
-            });
-
-            // Move to right if right button clicked
-            $(".rightButton").click(function () {
-                initiateMove(true,1);
-            });
+            // // Move to the left if left button clicked
+            // $(".leftButton").click(function () {
+            //     initiateMove(false,1);
+            // });
+            //
+            // // Move to right if right button clicked
+            // $(".rightButton").click(function () {
+            //     initiateMove(true,1);
+            // });
 
             // These are the click and hover events for the features
             pluginData.featuresContainer.children("div")
                 .click(function () {
                     var position = $(this).data('position');
+                    var $oldCenter = $(this).children("img");
+                    var img_path = $oldCenter.attr("src");
+                    if (position == 1)
+                    {
+                        console.log('get img path' + img_path);
+                    }
                     if (position == 2) {
                         initiateMove(true,1);
                     } else if (position == pluginData.totalFeatureCount) {
@@ -583,54 +590,6 @@
                         }
                     }
                 });
-
-            // Add event listener to all clicks within the features container
-            // This is done to disable any links that aren't within the center feature
-            $("a", pluginData.containerIDTag).live("click", function (event) {
-                // travel up to the container
-                var $parents = $(this).parentsUntil(pluginData.containerIDTag);
-                // now check each of the feature divs within it
-                $parents.each(function () {
-                    var position = $(this).data('position');
-                    // if there are more than just feature divs within the container, they will
-                    // not have a position and it may come back as undefined. Throw these out
-                    if (position != undefined) {
-                        // if any of the links on a feature OTHER THAN the center feature were clicked,
-                        // initiate a carousel move but then throw the link action away
-                        // if the position WAS the center (i.e. 1), then do nothing and let the link pass
-                        if (position != 1) {
-                            if (position == pluginData.totalFeatureCount) {
-                                initiateMove(false,1);
-                            } else if (position == 2) {
-                                initiateMove(true,1);
-                            }
-                            event.preventDefault();
-                            return false;
-                        }
-                    }
-                });
-            });
-
-            $(".blip").live("click",function () {
-                // grab the position # that was clicked
-                var goTo = $(this).attr("id").substring(5);
-                // find out where that feature # actually is in the carousel right now
-                var whereIsIt = pluginData.featuresContainer.children("div").eq(goTo-1).data('position');
-                // which feature # is currently in the center
-                var currentlyAt = pluginData.currentCenterNum;
-                // if the blip was clicked for the current center feature, do nothing
-                if (goTo != currentlyAt) {
-                    // find the shortest distance to move the carousel
-                    var shortest = findShortestDistance(1, whereIsIt);
-                    // initiate a move in that direction with given number of rotations
-                    if (shortest < 0) {
-                        initiateMove(false,(shortest*-1));
-                    } else {
-                        initiateMove(true,shortest);
-                    }
-                }
-
-            });
         });
     };
 

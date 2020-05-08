@@ -23,6 +23,7 @@ ul li{
 .div_map img{
     height: 280px;
     width: 280px;
+    -webkit-user-drag: none;
 }
 #featureCarousel {
     height: 300px;
@@ -43,21 +44,26 @@ ul li{
     position:absolute;
     bottom:0px;
     left:0px;
-    background-color:black;
+    /*background-color:black;*/
     width:100%;
 }
 #featureCarousel .feature > div p {
     margin:0;
     padding:5px;
     font-weight:bold;
-    font-size:1px;
-    color:white;
+    font-size:26px;
+    color:black;
+    background: rgba(214,213,214,1);
+    text-align: center;
 }
+
 #featureCarousel .blipsContainer {
     position:absolute;
     color:white;
-    right:25px;
-    top:210px;
+    left:524px;
+    bottom: 0;
+    top: 240px;
+    width: 170px;
     padding:0;
     margin:0;
 }
@@ -68,11 +74,10 @@ ul li{
     color:white;
     text-align:center;
     font-size:10px;
-    border:1px dotted black;
+    border:1px dotted white;
 }
 #featureCarousel .blipsContainer .blipSelected {
-    color:white;
+    color:black;
     font-weight:bold;
-    background-color:black;
+    background-color:white;
 }
-
