@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/xidi_mode_mt.css">
     <link rel="stylesheet" href="css/xidi_showbox.css">
     <link rel="stylesheet" href="css/xidi_author.css">
+    <link rel="stylesheet" href="css/xidi_check.css">
     <script type="text/javascript" src="js/xidi_time.js"></script>
 </head>
 <body>
@@ -68,7 +69,7 @@
     </div>
 </div>
 <!--鉴权界面-->
-<div class="mode_author" id="mode_author">
+<div class="mode_author" id="mode_author" hidden>
     <div class="bg_qrcode">
         <img for="bg_qrcode" src="img/验证/qrcode.png" id="qr_code">
     </div>
@@ -109,8 +110,16 @@
         <img for="author_button_back" src="img/验证/back.png">
     </button>
     <button class="author_button" id="author_button_del">清除</button>
-
-
+</div>
+<div class="mode_check" id="mode_check" >
+    <img style="position: absolute;left: 344px;top: 30px;height: 114px;width: 114px" src="img/自检/logo.gif">
+    <div class="mode_check_progress" >
+        <img src="img/自检/自检进度条-灰.png">
+        <img src="img/自检/自检进度条-蓝.png" id="mode_check_progress">
+    </div>
+    <span class="mode_check_span" id="mode_check_total">连接检测</span>
+    <span class="mode_check_span" id="mode_check_sub">ROS</span>
+    <span class="mode_check_span" id="mode_check_result">已连接</span>
 </div>
 </body>
 </html>
