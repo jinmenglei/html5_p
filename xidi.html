@@ -17,7 +17,27 @@
     <script src="js/map_select.js"></script>
     <script src="js/jquery.featureCarousel.js"></script>
     <script type="text/javascript" src="js/xidi_time.js"></script>
+    <script type="text/javascript" src="js/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="js/roslib.min.js"></script>
+    <script type="text/javascript" src="js/ros_interface.js"></script>
 </head>
+<script type="text/javascript">
+console.log("ros start")
+// Connecting to ROS
+var ros = new ROSLIB.Ros({
+url : 'ws://192.168.0.106:9090'
+});
+//判断是否连接成功并输出相应的提示消息到web控制台
+ros.on('connection', function() {
+console.log('Connected to websocket server.');
+});
+ros.on('error', function(error) {
+console.log('Error connecting to websocket server: ', error);
+});
+ros.on('close', function() {
+console.log('Connection to websocket server closed.');
+});
+</script>
 <body>
 <!--测试导入html-->
 <!--<iframe class="title_frame" frameborder="0" width="800" scrolling="No" height="40" marginwidth="0" marginheight="0" src="xidi_title.html"></iframe>-->
