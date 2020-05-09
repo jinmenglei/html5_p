@@ -22,7 +22,7 @@ ul li{
  ********************/
 .div_map img{
     height: 280px;
-    width: 280px;
+    width: 400px;
     -webkit-user-drag: none;
 }
 #featureCarousel {
@@ -55,17 +55,22 @@ ul li{
     color:black;
     background: rgba(214,213,214,1);
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*width: 400px;*/
 }
 
 #featureCarousel .blipsContainer {
     position:absolute;
     color:white;
-    left:524px;
-    bottom: 0;
-    top: 240px;
-    width: 170px;
+    left:694px;
+    bottom: 50px;
+    top: 50px;
+    /*width: 170px;*/
     padding:0;
     margin:0;
+    vertical-align: center;
 }
 #featureCarousel .blipsContainer .blip {
     margin:3px;

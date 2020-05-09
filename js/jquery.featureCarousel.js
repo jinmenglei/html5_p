@@ -567,6 +567,8 @@ $(document).ready(function() {
                     if (position == 1)
                     {
                         console.log('get img path' + img_path);
+                        document.getElementById("mode_map_select").style.display = "none";
+                        document.getElementById("mode_working").style.display = "block"
                     }
                     if (position == 2) {
                         initiateMove(true,1);
@@ -599,14 +601,14 @@ $(document).ready(function() {
         // If greater than one, use in place of original pixel dimensions
         largeFeatureWidth :     0,
         largeFeatureHeight:		0,
-        smallFeatureWidth:      .5,
-        smallFeatureHeight:		.5,
+        smallFeatureWidth:      .8,
+        smallFeatureHeight:		.8,
         // how much to pad the top of the carousel
-        topPadding:             20,
+        topPadding:             10,
         // spacing between the sides of the container (pixels)
         sidePadding:            30,
         // the additional offset to pad the side features from the top of the carousel
-        smallFeatureOffset:		50,
+        smallFeatureOffset:		20,
         // indicates which feature to start the carousel at
         startingFeature:        1,
         // speed in milliseconds it takes to rotate the carousel

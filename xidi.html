@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/xidi_author.css">
     <link rel="stylesheet" href="css/xidi_check.css">
     <link rel="stylesheet" href="css/xidi_map_select.css">
+    <link rel="stylesheet" href="css/xidi_working.css">
+    <link rel="stylesheet" href="css/xidi_start.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/map_select.js"></script>
     <script src="js/jquery.featureCarousel.js"></script>
@@ -19,22 +21,28 @@
 <body>
 <!--测试导入html-->
 <!--<iframe class="title_frame" frameborder="0" width="800" scrolling="No" height="40" marginwidth="0" marginheight="0" src="xidi_title.html"></iframe>-->
+<!--启动界面-->
+<div class="mode_start">
+    <img src="img/start/start.png">
+    <span style="position: absolute; left: 0; top: 340px;width: 800px; height: 24px;font-family: 'Microsoft YaHei';
+    font-size: 24px;text-align: center;" id="start_tip">正在启动，请稍后···</span>
+</div>
 <!--标题栏-->
 <div class="title">
-    <img src="img/首页/信号4.png" alt="" class="signal" id="signal_4G">
+    <img src="img/frame/s4.png" alt="" class="signal" id="signal_4G">
     <a class="title_4G" >4G</a>
     <a class="title_time" id="time">08:00</a>
     <a class="title_mode" id="mode">手动模式</a>
     <a class="title_battery" id="battery">80%</a>
-    <img src="img/首页/电池2.png" alt="" class="title_battery_img" id="battery_img">
+    <img src="img/frame/s2.png" alt="" class="title_battery_img" id="battery_img">
 </div>
 <!--尾部模块-->
 <div class="tail">
-    <img src="img/首页/水量.png" alt="" class="tail_water">
+    <img src="img/frame/water.png" alt="" class="tail_water">
     <a class="tail_water_percent" id="water_percent">100%</a>
     <a class="tail_water_label">水量</a>
     <button class="tail_mode_button" id="mode_button" >切换到 自动驾驶</button>
-    <img src="img/首页/lichen.png" alt="" class="tail_odom">
+    <img src="img/frame/lichen.png" alt="" class="tail_odom">
     <a class="tail_odom_sum" id="odom_sum">1234km</a>
     <a class="tail_odom_label">里程</a>
 </div>
@@ -75,7 +83,7 @@
 <!--鉴权界面-->
 <div class="mode_author" id="mode_author" hidden>
     <div class="bg_qrcode">
-        <img for="bg_qrcode" src="img/验证/qrcode.png" id="qr_code">
+        <img for="bg_qrcode" src="img/author/qrcode.png" id="qr_code">
     </div>
 
     <span class="author_tip" id="author_tip">
@@ -111,23 +119,23 @@
     <button class="author_button" id="author_button_8">8</button>
     <button class="author_button" id="author_button_9">9</button>
     <button class="author_button" id="author_button_back">
-        <img for="author_button_back" src="img/验证/back.png">
+        <img for="author_button_back" src="img/author/back.png">
     </button>
     <button class="author_button" id="author_button_del">清除</button>
 </div>
 <!--自检界面-->
 <div class="mode_check" id="mode_check" hidden>
-    <img style="position: absolute;left: 344px;top: 30px;height: 114px;width: 114px" src="img/自检/logo.gif">
+    <img style="position: absolute;left: 344px;top: 30px;height: 114px;width: 114px" src="img/check/logo.gif">
     <div class="mode_check_progress" >
-        <img src="img/自检/自检进度条-灰.png">
-        <img src="img/自检/自检进度条-蓝.png" id="mode_check_progress">
+        <img src="img/check/check-gray.png">
+        <img src="img/check/check-blue.png" id="mode_check_progress">
     </div>
     <span class="mode_check_span" id="mode_check_total">连接检测</span>
     <span class="mode_check_span" id="mode_check_sub">ROS</span>
     <span class="mode_check_span" id="mode_check_result">已连接</span>
 </div>
 <!--地图选择界面-->
-<div class="mode_map_select" id="mode_map_select">
+<div class="mode_map_select" id="mode_map_select" hidden>
     <div class="div_map" id="div_map">
         <div id="featureCarousel">
             <div class="feature">
@@ -190,13 +198,69 @@
                 <img alt="Image Caption" src="img/map_select/default.png">
                 <div>
                     <p>
-                        地图8
+                        地图8888888888888888888888888888888
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
+</div>
+<!--运行界面-->
+<div class="mode_working" id="mode_working" hidden>
+    <div style="position: absolute;left: 28px;top: 25px;width: 228px;height: 228px;background: white;">
+        <img src="img/map_select/default.png" style="position: absolute;left: 5px;top: 5px;height: 218px;width: 218px" id="mode_working_map">
+    </div>
+    <span class="mode_working_mapname" id="mapname" style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;">
+        这里可以显示多十个字xxxxxxxxxxxxxx
+    </span>
+    <div  style="position:absolute;left: 290px;top: 37px;width: 53px">
+        <ul class="mode_working_label">
+            <li >
+                <span>进度</span>
+            </li>
+            <li>
+                <span>速度</span>
+            </li>
+            <li>
+                <span>效率</span>
+            </li>
+            <li>
+                <span>坐标</span>
+            </li>
+        </ul>
+    </div>
+    <div class="mode_working_progress" >
+        <img style="position: absolute;left: 0;top: 0" src="img/working/working-gray.png">
+        <img style="position: absolute;left: 1px;top: 0" src="img/working/working-blue.png" id="working_progress">
+        <span class="working_span" id="span_progress">100%</span>
+    </div>
+    <div class="mode_working_speed" >
+        <img style="position: absolute;left: 0;top: 0" src="img/working/working-gray.png">
+        <img style="position: absolute;left: 1px;top: 0" src="img/working/working-blue.png" id="working_speed">
+        <span class="working_span" id="span_speed">0.48m/s</span>
+    </div>
+    <div class="mode_working_efficiency" >
+        <img style="position: absolute;left: 0;top: 0" src="img/working/working-gray.png">
+        <img style="position: absolute;left: 1px;top: 0" src="img/working/working-blue.png" id="working_efficiency">
+        <span class="working_span" id="span_efficiency">66m²/h</span>
+    </div>
+
+    <div  style="position:absolute;left: 380px;top: 195px;height: 24px">
+        <ul class="mode_postion_label">
+            <li >
+                <span id="span_x">X:54.00</span>
+            </li>
+            <li>
+                <span id="span_y">Y:76.00</span>
+            </li>
+            <li>
+                <span id="span_z">Z:12.00</span>
+            </li>
+        </ul>
+    </div>
+    <button id="working_pause">暂停</button>
+    <button id="working_cancel" disabled>取消</button>
 </div>
 </body>
 </html>
