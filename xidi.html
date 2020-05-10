@@ -25,7 +25,7 @@
 console.log("ros start")
 // Connecting to ROS
 var ros = new ROSLIB.Ros({
-url : 'ws://192.168.0.106:9090'
+url : 'ws://127.0.0.1:9090'
 });
 //判断是否连接成功并输出相应的提示消息到web控制台
 ros.on('connection', function() {
@@ -42,7 +42,7 @@ console.log('Connection to websocket server closed.');
 <!--测试导入html-->
 <!--<iframe class="title_frame" frameborder="0" width="800" scrolling="No" height="40" marginwidth="0" marginheight="0" src="xidi_title.html"></iframe>-->
 <!--启动界面-->
-<div class="mode_start">
+<div class="mode_start" id="mode_start">
     <img src="img/start/start.png">
     <span style="position: absolute; left: 0; top: 340px;width: 800px; height: 24px;font-family: 'Microsoft YaHei';
     font-size: 24px;text-align: center;" id="start_tip">正在启动，请稍后···</span>
