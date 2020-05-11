@@ -21,6 +21,8 @@
     <script src="js/ui/mode_map_select.js"></script>
     <script src="js/ui/ui_manager.js"></script>
     <script src="js/ui/mode_start.js"></script>
+    <script src="js/ui/mode_mt.js"></script>
+    <script src="js/ui/mode_frame.js"></script>
     <script src="js/other/jquery.featureCarousel.js"></script>
     <script src="js/other/xidi_time.js"></script>
     <script src="js/third_part/eventemitter2.min.js"></script>
@@ -46,6 +48,19 @@
         <option>弹窗测试</option>
     </select>
     <button id="button_change">切换页面</button>
+    <label for="showbox_select">选择弹窗内容</label>
+    <select id="showbox_select">
+        <option>是否要切换为\n手动驾驶模式</option>
+        <option>是否要切换为\n自动驾驶模式</option>
+        <option>是否开始清扫?</option>
+        <option>是否要取消当前任务，\n切换到手动驾驶？</option>
+        <option>失去底层连接\n请联系售后</option>
+        <option>检测到新版本\n是否升级</option>
+        <option>启动出现异常\n是否重新启动</option>
+        <option>未发现可用地图\n切换到手动驾驶？</option>
+        <option>启动文件异常\n点击‘是’，重新选择\n 点击‘否’，切换到手动驾驶</option>
+        <option>系统错误</option>
+    </select>
 </div>
 <!--启动界面-->
 <div class="mode_start" id="mode_start">

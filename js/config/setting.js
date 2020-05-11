@@ -43,16 +43,16 @@ const show_box_index = {
 }
 
 const list_show_box_string = [
-    ['是否要切换为\n手动驾驶模式', mode_index.Page_mt_mode, null],
-    ['是否要切换为\n自动驾驶模式', mode_index.Page_author, null],
+    ['是否要切换为<br>手动驾驶模式', mode_index.Page_mt_mode, null],
+    ['是否要切换为<br>自动驾驶模式', mode_index.Page_author, null],
     ['是否开始清扫?', mode_index.Page_working, null],
-    ['是否要取消当前任务，\n切换到手动驾驶？', mode_index.Page_mt_mode, null],
-    ['失去底层连接\n请联系售后', null, null],
-    ['检测到新版本\n是否升级', mode_index.Page_Update, null],
-    ['地图不存在或不可用\n是否重新选择', mode_index.Page_map_select, mode_index.Page_mt_mode],
-    ['启动出现异常\n是否重新启动', null, null],
-    ['未发现可用地图\n切换到手动驾驶？', mode_index.Page_mt_mode, null],
-    ['启动文件异常\n点击‘是’，重新选择\n 点击‘否’，切换到手动驾驶', null, mode_index.Page_mt_mode],
+    ['是否要取消当前任务，<br>切换到手动驾驶？', mode_index.Page_mt_mode, null],
+    ['失去底层连接<br>请联系售后', null, null],
+    ['检测到新版本<br>是否升级', null, null],
+    ['地图不存在或不可用<br>是否重新选择', mode_index.Page_map_select, mode_index.Page_mt_mode],
+    ['启动出现异常<br>是否重新启动', null, null],
+    ['未发现可用地图<br>切换到手动驾驶？', mode_index.Page_mt_mode, null],
+    ['启动文件异常<br>点击‘是’，重新选择<br> 点击‘否’，切换到手动驾驶', null, mode_index.Page_mt_mode],
 ]
 //启动界面配置
 const start_result = {
