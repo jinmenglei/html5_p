@@ -61,7 +61,7 @@ $(document).ready(function() {
              */
             function preload(callback) {
                 // user may not want to preload images
-                if (options.preload == true) {
+                if (options.preload === true) {
                     var $imageElements = pluginData.featuresContainer.find("img");
                     var loadedImages = 0;
                     var totalImages = $imageElements.length;
@@ -72,7 +72,7 @@ $(document).ready(function() {
                         $(this).on('load',function() {
                             // Add to number of images loaded and see if they are all done yet
                             loadedImages++;
-                            if (loadedImages == totalImages) {
+                            if (loadedImages === totalImages) {
                                 // All done, perform callback
                                 callback();
                             }
@@ -98,14 +98,14 @@ $(document).ready(function() {
             // get a feature given it's set position (the position that doesn't change)
             function getBySetPos(position) {
                 $.each(pluginData.featuresArray, function () {
-                    if ($(this).data().setPosition == position)
+                    if ($(this).data().setPosition === position)
                         return $(this);
                 });
             }
 
             // get previous feature number
             function getPreviousNum(num) {
-                if ((num - 1) == 0) {
+                if ((num - 1) === 0) {
                     return pluginData.totalFeatureCount;
                 } else {
                     return num - 1;
@@ -182,7 +182,7 @@ $(document).ready(function() {
                 });
 
                 // Determine the total border width around the feature if there is one
-                if (pluginData.featuresContainer.children("div").first().css("borderLeftWidth") != "medium") {
+                if (pluginData.featuresContainer.children("div").first().css("borderLeftWidth") !== "medium") {
                     pluginData.borderWidth = parseInt(pluginData.featuresContainer.children("div").first().css("borderLeftWidth"))*2;
                 }
 
@@ -247,13 +247,13 @@ $(document).ready(function() {
                 // And everything after that center feature...
                 var $nextFeatures = $centerFeature.nextAll();
                 $nextFeatures.each(function (i) {
-                    if ($(this).data('setPosition') != undefined) {
+                    if ($(this).data('setPosition') !== undefined) {
                         $(this).data('position',(i + 2));
                     }
                 });
 
                 // if the counter style is for including number tags in description...
-                if (options.counterStyle == 3) {
+                if (options.counterStyle === 3) {
                     $.each(pluginData.featuresArray, function () {
                         var pos = getPreviousNum($(this).data('position'));
                         var $numberTag = $("<span></span>");
@@ -271,14 +271,14 @@ $(document).ready(function() {
             function setupBlips()
             {
                 // Only setup the blips if the counter style is 1 or 2
-                if (options.counterStyle == 1 || options.counterStyle == 2) {
+                if (options.counterStyle === 1 || options.counterStyle === 2) {
                     // construct the blip list
                     var $list = $("<ul></ul>");
                     $list.addClass("blipsContainer");
                     for (var i = 0; i < pluginData.totalFeatureCount; i++) {
                         // Counter style 1 has no numbers, while 2 does
                         var counter;
-                        if (options.counterStyle == 2)
+                        if (options.counterStyle === 2)
                             counter = "";
                         else
                             counter = i+1;
@@ -324,7 +324,7 @@ $(document).ready(function() {
                 }
 
                 // set interval for moving if autoplay is set
-                if (options.autoPlay != 0) {
+                if (options.autoPlay !== 0) {
                     var autoTime = (Math.abs(options.autoPlay) < options.carouselSpeed) ? options.carouselSpeed : Math.abs(options.autoPlay);
                     pluginData.timeoutVar = setTimeout(function () {
                         if (options.autoPlay > 0)
@@ -340,7 +340,7 @@ $(document).ready(function() {
             function rotatePositions(direction) {
                 $.each(pluginData.featuresArray, function () {
                     var newPos;
-                    if (direction == false) {
+                    if (direction === false) {
                         newPos = getNextNum($(this).data().position);
                     } else {
                         newPos = getPreviousNum($(this).data().position);
@@ -360,13 +360,13 @@ $(document).ready(function() {
                 // Determine the old and new positions of the feature
                 var oldPosition = $feature.data('position');
                 var newPosition;
-                if (direction == true)
+                if (direction === true)
                     newPosition = getPreviousNum(oldPosition);
                 else
                     newPosition = getNextNum(oldPosition);
 
                 // Caculate new new css values depending on where the feature will be located
-                if (newPosition == 1) {
+                if (newPosition === 1) {
                     new_width = pluginData.largeFeatureWidth;
                     new_height = pluginData.largeFeatureHeight;
                     new_top = options.topPadding;
@@ -381,10 +381,10 @@ $(document).ready(function() {
                     new_fade = 0.4;
                     // some info is different for the left, right, and hidden positions
                     // left
-                    if (newPosition == pluginData.totalFeatureCount) {
+                    if (newPosition === pluginData.totalFeatureCount) {
                         new_left = options.sidePadding;
                     // right
-                    } else if (newPosition == 2) {
+                    } else if (newPosition === 2) {
                         new_left = pluginData.containerWidth - pluginData.smallFeatureWidth - options.sidePadding - pluginData.borderWidth;
                     // hidden
                     } else {
@@ -394,7 +394,7 @@ $(document).ready(function() {
                 }
                 // This code block takes care of hiding the feature information if the feature is
                 // NO LONGER going to be in the center
-                if (newPosition != 1) {
+                if (newPosition !== 1) {
                     // Slide up the story information
                     $feature.find("div")
                         .hide();
@@ -414,7 +414,7 @@ $(document).ready(function() {
                         options.animationEasing,
                         function () {
                             // Take feature info out of hiding if new position is center
-                            if (newPosition == 1) {
+                            if (newPosition === 1) {
                                 // fade in the feature information
                                 $feature.find("div")
                                     .fadeTo("fast",0.85);
@@ -424,12 +424,12 @@ $(document).ready(function() {
                             // have to change the z-index after the animation is done
                             $feature.css("z-index", new_zindex);
                             // change blips if using them
-                            if (options.counterStyle == 1 || options.counterStyle == 2) {
-                                if (newPosition == 1) {
+                            if (options.counterStyle === 1 || options.counterStyle === 2) {
+                                if (newPosition === 1) {
                                     // figure out what item was just in the center, and what item is now in the center
                                     var newCenterItemNum = pluginData.featuresContainer.children("div").index($feature) + 1;
                                     var oldCenterItemNum;
-                                    if (direction == false)
+                                    if (direction === false)
                                         oldCenterItemNum = getNextNum(newCenterItemNum);
                                     else
                                         oldCenterItemNum = getPreviousNum(newCenterItemNum);
@@ -440,7 +440,7 @@ $(document).ready(function() {
 
                             // did all the the animations finish yet?
                             var divide = pluginData.rotationsRemaining / pluginData.itemsToAnimate;
-                            if (divide % 1 == 0) {
+                            if (divide % 1 === 0) {
                                 // if so, set moving to false...
                                 pluginData.currentlyMoving = false;
                                 // change positions for all items...
@@ -480,7 +480,7 @@ $(document).ready(function() {
 
                 // Obtain the new feature positions based on the direction that the carousel is moving
                 var $newCenter, $newLeft, $newRight, $newHidden;
-                if (direction == true) {
+                if (direction === true) {
                     // Shift features to the left
                     $newCenter = getContainer(getNextNum(pluginData.currentCenterNum));
                     $newLeft = getContainer(pluginData.currentCenterNum);
@@ -518,9 +518,8 @@ $(document).ready(function() {
             // It will only initiate a move if the carousel isn't currently moving
             // It will set the animation queue to the number of rotations given
             function initiateMove(direction, rotations) {
-                if (pluginData.currentlyMoving == false) {
-                    var queue = rotations * pluginData.itemsToAnimate;
-                    pluginData.rotationsRemaining = queue;
+                if (pluginData.currentlyMoving === false) {
+                    pluginData.rotationsRemaining = rotations * pluginData.itemsToAnimate;
                     move(direction);
                 }
             }
@@ -534,13 +533,13 @@ $(document).ready(function() {
                 var goingToLeft = 1, goingToRight = 1, tracker;
                 tracker = from;
                 // see how long it takes to go to the left
-                while ((tracker = getPreviousNum(tracker)) != to) {
+                while ((tracker = getPreviousNum(tracker)) !== to) {
                     goingToLeft++;
                 }
 
                 tracker = from;
                 // see how long it takes to to to the right
-                while ((tracker = getNextNum(tracker)) != to) {
+                while ((tracker = getNextNum(tracker)) !== to) {
                     goingToRight++;
                 }
 
@@ -564,30 +563,30 @@ $(document).ready(function() {
                     var position = $(this).data('position');
                     var $oldCenter = $(this).children("img");
                     var img_path = $oldCenter.attr("src");
-                    if (position == 1)
+                    if (position === 1)
                     {
                         console.log('get img path' + img_path);
                         document.getElementById("mode_map_select").style.display = "none";
                         document.getElementById("mode_working").style.display = "block"
                     }
-                    if (position == 2) {
+                    if (position === 2) {
                         initiateMove(true,1);
-                    } else if (position == pluginData.totalFeatureCount) {
+                    } else if (position === pluginData.totalFeatureCount) {
                         initiateMove(false,1);
                     }
                 })
                 .mouseover(function () {
-                    if (pluginData.currentlyMoving == false) {
+                    if (pluginData.currentlyMoving === false) {
                         var position = $(this).data('position');
-                        if (position == 2 || position == pluginData.totalFeatureCount) {
+                        if (position === 2 || position === pluginData.totalFeatureCount) {
                             $(this).css("opacity",0.8);
                         }
                     }
                 })
                 .mouseout(function () {
-                    if (pluginData.currentlyMoving == false) {
+                    if (pluginData.currentlyMoving === false) {
                         var position = $(this).data('position');
-                        if (position == 2 || position == pluginData.totalFeatureCount) {
+                        if (position === 2 || position === pluginData.totalFeatureCount) {
                             $(this).css("opacity",0.4);
                         }
                     }
