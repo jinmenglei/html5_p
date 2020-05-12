@@ -5,7 +5,7 @@ const mode_index = {
     Page_check: 2,
     Page_map_select: 3,
     Page_working: 4,
-    Page_start: 5
+    Page_start: 5,
 };
 const mode_title_list = [
     '手动模式',
@@ -24,6 +24,14 @@ const mode_index_id = [
     "mode_working",
     "mode_start"
 ]
+// const ins_mode_index = {
+//     0:null,
+//     1:null,
+//     2:null,
+//     3:null,
+//     4:null,
+//     5:null
+// }
 //弹窗配置
 const show_box_list_index = {
     show_box_tip:0,
@@ -69,7 +77,12 @@ const start_step = {
     start_xiaoyuan:3,
     start_status_cnt:4
 }
-
+const list_start_info = [
+    ['正在启动界面程序', '界面程序启动已完成', '界面程序启动超时', false, false],
+    ['正在启动主节点', '主节点启动已完成', '主节点启动失败', false, false],
+    ['正在启动底盘程序', '底盘程序已启动', '底盘程序启动失败', false, false],
+    ['与底盘通信中', '通信已完成', '与底盘失去连接', false, false],
+]
 //工作界面配置
 const list_working_label_unit = ['%', 'm/s', 'm²/h']
 const list_working_max_value = [100, 1.2, 2700]
