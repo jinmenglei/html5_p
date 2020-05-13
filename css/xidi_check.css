@@ -18,8 +18,9 @@
     position: absolute;
     left: 3px;
     top: 4px;
-    width: 85%;
+    width: 10%;
     height: 34px;
+    overflow: hidden;
     /*z-index: 2;*/
 }
 .mode_check_span{

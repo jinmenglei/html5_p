@@ -36,6 +36,14 @@ function C_ui_manager() {
             const ins_mode_author = new C_mode_author();
             _ins_dict_mode_index[ins_index.Page_author] = ins_mode_author;
             ins_mode_author.start();
+
+            const ins_mode_check = new C_mode_check();
+            _ins_dict_mode_index[ins_index.Page_check] = ins_mode_check;
+            ins_mode_check.start();
+
+            const ins_mode_map_select = new C_mode_map_select();
+            _ins_dict_mode_index[ins_index.Page_map_select] = ins_mode_map_select;
+            ins_mode_map_select.start();
         }
     }
 

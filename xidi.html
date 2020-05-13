@@ -23,6 +23,7 @@
     <script src="js/ui/mode_mt.js"></script>
     <script src="js/ui/mode_frame.js"></script>
     <script src="js/ui/mode_author.js"></script>
+    <script src="js/ui/mode_check.js"></script>
     <script src="js/other/jquery.featureCarousel.js"></script>
     <script src="js/other/xidi_time.js"></script>
     <script src="js/third_part/eventemitter2.min.js"></script>
@@ -170,7 +171,9 @@
     <img style="position: absolute;left: 344px;top: 30px;height: 114px;width: 114px" src="img/check/logo.gif" alt="">
     <div class="mode_check_progress" >
         <img src="img/check/check-gray.png" alt="">
-        <img src="img/check/check-blue.png" id="mode_check_progress" alt="">
+        <div class="mode_check_progress" id="mode_check_progress">
+            <img src="img/check/check-blue.png" alt="">
+        </div>
     </div>
     <span class="mode_check_span" id="mode_check_total">连接检测</span>
     <span class="mode_check_span" id="mode_check_sub">ROS</span>
