@@ -7,6 +7,18 @@ const mode_index = {
     Page_working: 4,
     Page_start: 5,
 };
+const ins_index = {
+    Page_mt_mode: 0,
+    Page_author: 1,
+    Page_check: 2,
+    Page_map_select: 3,
+    Page_working: 4,
+    Page_start: 5,
+    Page_frame:6,
+    Page_show_box:7,
+    Page_ros_interface:8,
+    Page_ui_manager:9
+};
 const mode_title_list = [
     '手动模式',
     '验证鉴权',
@@ -166,3 +178,4 @@ const Update_list_all = [
     ['升级导航', '进度', null, update_status_index.Update_status_idle, 0],
     ['升级界面', '进度', null, update_status_index.Update_status_idle, 0],
 ]
+// ui_manager

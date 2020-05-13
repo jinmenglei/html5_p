@@ -1,5 +1,8 @@
 function C_mode_start() {
     this.start = _start;
+    this.update_start_launch=_update_start_launch;
+    this.update_start_underpan=_update_start_underpan;
+    this.get_starting_status=_get_starting_status
     let _start_timer = null;
     let _start_ed = false;
     let _start_index = 0;
@@ -7,6 +10,19 @@ function C_mode_start() {
     let _timeout_cnt = 0;
     let _status_cnt = 0;
     let _list_start_info = list_start_info;
+    let _is_starting = true;
+    let ins_showbox = ins_ui_manager.get_ins_from_ui_manager(ins_index.Page_show_box);
+
+    function _get_starting_status() {
+        return _is_starting;
+    }
+
+    function _update_start_launch(status) {
+        _list_start_info[start_step.start_launch][start_result.start_status] = status;
+    }
+    function _update_start_underpan(status) {
+        _list_start_info[start_step.start_xiaoyuan][start_result.start_status] = status;
+    }
 
     function _start() {
         if (! _start_ed) {
@@ -22,9 +38,8 @@ function C_mode_start() {
         let str_show = ''
 
         if (_start_index >= start_step.start_status_cnt) {
-            // self.mode_dispatcher(Page_mt_mode);
-            $(document.getElementById("mode_start")).hide();
-            $(document.getElementById("mode_mt")).show();
+            _is_starting = false;
+            ins_ui_manager.mode_dispatcher(mode_index.Page_mt_mode);
             clearInterval(_start_timer);
         } else {
             _tmp_list = _list_start_info[_start_index]
