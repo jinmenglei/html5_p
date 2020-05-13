@@ -44,6 +44,7 @@ function C_ui_manager() {
             const ins_mode_map_select = new C_mode_map_select();
             _ins_dict_mode_index[ins_index.Page_map_select] = ins_mode_map_select;
             ins_mode_map_select.start();
+
         }
     }
 
