@@ -24,6 +24,7 @@
     <script src="js/ui/mode_frame.js"></script>
     <script src="js/ui/mode_author.js"></script>
     <script src="js/ui/mode_check.js"></script>
+    <script src="js/ui/mode_working.js"></script>
     <script src="js/other/jquery.featureCarousel.js"></script>
     <script src="js/other/xidi_time.js"></script>
     <script src="js/third_part/eventemitter2.min.js"></script>
@@ -277,17 +278,23 @@
     </div>
     <div class="mode_working_progress" >
         <img style="position: absolute;left: 0;top: 0" src="img/working/working-gray.png" alt="">
-        <img style="position: absolute;left: 1px;top: 0" src="img/working/working-blue.png" id="working_progress" alt="">
+        <div style="position: absolute;left: 1px;top: 0" id="working_progress">
+            <img  src="img/working/working-blue.png" alt="">
+        </div>
         <span class="working_span" id="span_progress">100%</span>
     </div>
     <div class="mode_working_speed" >
         <img style="position: absolute;left: 0;top: 0" src="img/working/working-gray.png" alt="">
-        <img style="position: absolute;left: 1px;top: 0" src="img/working/working-blue.png" id="working_speed" alt="">
+        <div style="position: absolute;left: 1px;top: 0" id="working_speed" >
+            <img  src="img/working/working-blue.png" alt="">
+        </div>
         <span class="working_span" id="span_speed">0.48m/s</span>
     </div>
     <div class="mode_working_efficiency" >
         <img style="position: absolute;left: 0;top: 0" src="img/working/working-gray.png" alt="">
-        <img style="position: absolute;left: 1px;top: 0" src="img/working/working-blue.png" id="working_efficiency" alt="">
+        <div style="position: absolute;left: 1px;top: 0" id="working_efficiency">
+            <img  src="img/working/working-blue.png" alt="">
+        </div>
         <span class="working_span" id="span_efficiency">66m²/h</span>
     </div>
 

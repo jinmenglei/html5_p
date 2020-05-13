@@ -566,8 +566,9 @@ $(document).ready(function() {
                     if (position === 1)
                     {
                         console.log('get img path' + img_path);
-                        document.getElementById("mode_map_select").style.display = "none";
-                        document.getElementById("mode_working").style.display = "block"
+                        // document.getElementById("mode_map_select").style.display = "none";
+                        // document.getElementById("mode_working").style.display = "block";
+                        ins_ui_manager.mode_dispatcher(mode_index.Page_working);
                     }
                     if (position === 2) {
                         initiateMove(true,1);
